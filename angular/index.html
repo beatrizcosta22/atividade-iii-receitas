@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Receitas - AngularJS</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main ng-controller="RecipeController">
+      <a href="/">Início</a>
+      <h1>Receitas da Bia - AngularJS</h1>
+      <section>
+        <h2>Ajuda</h2>
+        <recipe-accordion items="faq"></recipe-accordion>
+      </section>
+      <section>
+        <h2>Receitas</h2>
+        <label>Pesquisar <input ng-model="search" ng-change="page=1" /></label
+        ><recipe-dropdown
+          options="categories"
+          on-select="setCategory(value)"
+        ></recipe-dropdown>
+        <p>Filtro: {{category}}</p>
+        <ul>
+          <li
+            ng-repeat="item in filtered() | limitTo:pageSize:(page-1)*pageSize"
+          >
+            {{item.name | uppercase}} — {{item.category}}
+          </li>
+        </ul>
+        <p ng-if="!filtered().length">Nenhuma receita encontrada.</p>
+        <recipe-pagination
+          total="pages()"
+          current="page"
+          on-change="changePage(value)"
+        ></recipe-pagination>
+      </section>
+      <section>
+        <h2>Preparo da panqueca</h2>
+        <p>Quatro etapas: separar, misturar, cozinhar e servir.</p>
+        <button ng-click="progress=0">Recomeçar</button>
+        <button ng-disabled="progress>=100" ng-click="progress=progress+25">
+          Concluir etapa
+        </button>
+        <recipe-progress value="progress"></recipe-progress>
+      </section>
+      <section>
+        <h2>Receita de exemplo</h2>
+        <recipe-tabs items="tabs"></recipe-tabs>
+      </section>
+      <button ng-click="save()">Guardar etapa</button
+      ><recipe-toast
+        message="notice.message"
+        on-close="closeNotice()"
+      ></recipe-toast>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
