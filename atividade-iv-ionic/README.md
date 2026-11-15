@@ -46,7 +46,7 @@ As bibliotecas mantêm seus avisos de licença nos arquivos distribuídos.
 
 1. Tente entrar sem dados e depois use a conta de demonstração.
 2. Abra uma notícia em Ler mais e volte ao mural.
-3. No navegação por abas, abra Meu cadastro; altere o e-mail e salve.
+3. Na aba Cadastro, abra seus dados; altere o e-mail e salve.
 4. Abra Mensalidades, troque o semestre e observe os status.
 5. Em uma parcela A Pagar, copie a linha digitável fictícia.
 6. Mostre as rotas, os quatro serviços e os controllers no código.

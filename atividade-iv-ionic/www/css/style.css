@@ -89,10 +89,56 @@ select {
 }
 
 /* Identidade desta versão: cabeçalhos claros e navegação inferior. */
-:root{--ucsal-marinho:#153a60;--ucsal-claro:#e7f2fa;--ucsal-branco:#fff}
-.bar.bar-positive{background:var(--ucsal-claro);border-bottom:2px solid var(--ucsal-marinho)}
-.bar-positive .title,.bar-positive .button{color:var(--ucsal-marinho)}
-.tabs{background:white;border-top:1px solid #a8c3d7}
-.pagina{max-width:680px}.login{max-width:420px;margin-top:25px;border-top:5px solid var(--ucsal-marinho);padding:20px;background:white}
-.list.card{box-shadow:none;border:1px solid #bfd0df;border-radius:5px}
-.item-image img{max-height:130px}.item h2{font-weight:bold}.nota{border-left:3px solid #407aa3}
+:root {
+  --ucsal-marinho: #153a60;
+  --ucsal-claro: #e7f2fa;
+  --ucsal-branco: #fff;
+}
+.bar.bar-positive {
+  background: var(--ucsal-claro);
+  border-bottom: 2px solid var(--ucsal-marinho);
+}
+.bar-positive .title,
+.bar-positive .button {
+  color: var(--ucsal-marinho);
+}
+.tabs {
+  background: white;
+  border-top: 1px solid #a8c3d7;
+}
+.pagina {
+  max-width: 680px;
+}
+.login {
+  max-width: 420px;
+  margin-top: 25px;
+  border-top: 5px solid var(--ucsal-marinho);
+  padding: 20px;
+  background: white;
+}
+.list.card {
+  box-shadow: none;
+  border: 1px solid #bfd0df;
+  border-radius: 5px;
+}
+.item-image img {
+  max-height: 130px;
+}
+.item h2 {
+  font-weight: bold;
+}
+.nota {
+  border-left: 3px solid #407aa3;
+}
+.bar.bar-positive .title,
+.bar.bar-positive .button {
+  color: var(--ucsal-marinho);
+}
+.tabs-color-positive .tab-item {
+  color: #153a60;
+  opacity: 0.8;
+}
+.tabs-color-positive .tab-item.tab-item-active {
+  color: #153a60;
+  opacity: 1;
+}
