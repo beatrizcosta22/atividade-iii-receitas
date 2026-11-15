@@ -1,0 +1,36 @@
+<ion-view hide-nav-bar="true" view-title="Portal do Aluno"
+  ><ion-content class="padding"
+    ><div class="pagina login">
+      <h1>UCSal • Área do estudante</h1>
+      <p>Acesse seus avisos, cadastro e parcelas.</p>
+      <form name="formLogin" ng-submit="entrar(formLogin)" novalidate>
+        <div class="list">
+          <label class="item item-input item-stacked-label"
+            ><span class="input-label">Matrícula</span
+            ><input
+              aria-label="Matrícula"
+              ng-model="login.matricula"
+              inputmode="numeric"
+              required /></label
+          ><label class="item item-input item-stacked-label"
+            ><span class="input-label">Senha</span
+            ><input
+              aria-label="Senha"
+              type="password"
+              ng-model="login.senha"
+              required
+          /></label>
+        </div>
+        <p class="erro" role="alert" ng-if="erro">{{erro}}</p>
+        <button type="submit" class="button button-positive button-block">
+          Entrar
+        </button>
+      </form>
+      <p>
+        Dados de demonstração:<br />Matrícula: <strong>20262001</strong
+        ><br />Senha: <strong>123456</strong>
+      </p>
+      <p class="nota">Protótipo acadêmico com dados fictícios.</p>
+    </div></ion-content
+  ></ion-view
+>
